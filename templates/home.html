@@ -1,0 +1,15 @@
+<title>Reddit</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<div>
+	<h1>Reddit</h1>
+</div>
+<div>
+	<h1><a href="{{	url_for('submit_post')	}}">Submit new post</a></h1>
+</div>
+<section class="page">
+	{%for post in posts %}
+	<section>
+		<h2>{{posts[post]}} {{post}} </h2>
+	</section>
+	{% endfor %}
+</section>
